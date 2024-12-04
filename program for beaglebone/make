@@ -1,0 +1,22 @@
+# Makefile cho chương trình uart
+
+# Tên chương trình thực thi
+TARGET = uart_bbb
+
+# Các file mã ngu▒~Sn
+SRC = uart_bbb.c
+
+# Biên d▒~Kch v▒|  liên kết
+CC = gcc
+CFLAGS = -Wall -O2
+LDFLAGS =
+
+# Quy tắc ▒~Q▒~C biên d▒~Kch chương trình
+all: $(TARGET)
+
+$(TARGET): $(SRC)
+        $(CC) $(CFLAGS) $(SRC) -o $(TARGET) $(LDFLAGS)
+
+# Quy tắc ▒~Q▒~C l▒| m sạch các file tạm
+clean:
+        rm -f $(TARGET)
